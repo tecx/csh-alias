@@ -1,0 +1,95 @@
+#alias ssh ssh -Y
+alias	ll	'ls -lFh'
+alias	lt	'll -tr'
+alias	lla	'll -a'
+alias	lld	'll -d'
+
+#alias	cp	'cp -d'
+
+alias	p	'pwd'
+alias	h	'history'
+alias	l	'less -iIS'
+alias	G	'zegrep'
+alias	hG	'history | egrep'
+alias	hg	'hG'
+alias	cG	'cat $HOME/cheatsheet/cheat | egrep'
+alias	du	'du -ksh'
+alias	mydu 'chkquota tsong'
+alias	rp	'readlink -f'
+alias	j	'jobs'
+alias	t	'tail'
+alias	tf	'tail -f'
+alias	tfx	'/usr/bin/xterm -rv -e tail -f'
+alias	wcl	'wc -l'
+
+alias	tar_comp	'tar -zcf'
+alias	tar_uncomp	'tar -zxf'
+alias	tar_update	'tar -uvf'
+alias	tar_rm		'$HOME/bin/tar_rm.csh'
+
+alias	rmbg		'$HOME/bin/remove_in_background.csh'
+
+alias	cd		'pushd \!* > /dev/null; pwd'
+alias	back	'popd > /dev/null; pwd'
+alias	cdb		'cd $HOME/bin'
+alias	cdpwd	'cd $PWD'
+alias	cheat	'cat $HOME/cheatsheet/cheat'
+
+alias	v	'gvim -geom 120x40 -reverse'
+alias	g	'v'
+alias	vcheat	'v $HOME/cheatsheet/cheat'
+alias	vias	'v $HOME/.aliases'
+alias	vvimrc	'v $HOME/.vimrc'
+alias	sas	'source $HOME/.aliases; echo "source $HOME/.aliases"'
+alias	setwork	'setenv WORKAREA $PWD'
+alias	setwd	'setenv wd $PWD'
+alias	setpath	'set path = ($path /home/my/tsong/bin); echo $path'
+alias	epath	'echo $path'
+
+alias	poptf		'xterm -geom 160x35 -reverse -e tail -f \!* &'
+alias	popwatch	'xterm -geom 110x35 -reverse -e watch \!* &'
+alias	tkdiff12	'tkdiff /tmp/1 /tmp/2 &'
+alias	wj			'xterm -geom 110x20 -reverse -e watch -n 1 $HOME/bin/watch_qjobs.csh \!* &'
+
+alias	cdw		'cd $WORKAREA'
+alias	cdwd	'cd $wd'
+alias	cds		'cd $SIM_ROOT'
+alias	cdsim	'cd $WORKAREA/sim/memory/timing'
+alias	cdfv	'cd $WORKAREA/fv/memory'
+
+alias	..		'cd ..'
+alias	..2		'cd ../..'
+alias	..3		'cd ../../..'
+alias	..4		'cd ../../../..'
+alias	..5		'cd ../../../../..'
+alias	..6		'cd ../../../../../..'
+alias	..7		'cd ../../../../../../..'
+
+alias	escslash	'echo \!* | sed "s/\//\\\//g"'
+alias	nme			'history | tail -n 2 | sed "2d" | mail -s "## Run Completed \!* ##" <email>'
+
+## SOS
+alias	sco			'soscmd co'
+alias	scov		'soscmd co \!*; v \!*'
+alias	sci			'soscmd ci'
+alias	sosdiff		'soscmd diff \!* -gui'
+alias	sosu		'soscmd update && soscmd exit -F'
+alias	soseF		'soscmd exit -F'
+alias	myco		'sosslk | grep $USER'
+alias	sosstat		'soscmd objstatus'
+
+## OpenOffice
+alias	scalc	'soffice -calc'
+
+alias	myqhost			'qhost -j | l'
+
+alias	q				'qstat          | head -n 20; echo "  *"; echo "  *"; echo "  *"; echo "-----------------------------------------------------------------------------------------------------------------"; echo -n "I: $USER Running : "; qstat | G $USER | G " r " | wc -l; echo -n "I: $USER Queueing: "; qstat | G $USER | G " q" | wc -l'
+alias	qme				'qstat -u $USER | head -n 20; echo "  *"; echo "  *"; echo "  *"; echo "-----------------------------------------------------------------------------------------------------------------"; echo -n "I: $USER Running : "; qstat | G $USER | G " r " | wc -l; echo -n "I: $USER Queueing: "; qstat | G $USER | G " q" | wc -l'
+alias	qr				'qstat -r          | l'
+alias	qrme			'qstat -r -u $USER | l'
+alias	qf				'qstat -r          | grep -B1 Full | l'
+alias	qfme			'qstat -r -u $USER | grep -B1 Full | l'
+alias	ql				'qstat          | l'
+alias	qlme			'qstat -u $USER | l'
+
+
