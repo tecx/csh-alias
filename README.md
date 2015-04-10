@@ -1,2 +1,2 @@
 # csh-alias
-My favourite cshell aliases.
+My favourite c-shell aliases.
